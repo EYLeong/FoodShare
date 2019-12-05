@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginLeft="5dp"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"/>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ordersSummary"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/DarkerOrange"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/ordersSummary"/>
+
+        <TextView
+            android:id="@+id/deliveryfeetext"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ordersSummary"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:text="Delivery fees : S$"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/deliveryFee"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ordersSummary"
+            android:layout_toRightOf="@+id/deliveryfeetext"
+            android:text="0.00"
+            android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/foodcosttext"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveryFee"
+            android:text="Food cost: S$"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/foodCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveryFee"
+            android:layout_toRightOf="@id/foodcosttext"
+            android:text="0.00"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_toLeftOf="@+id/pricePerUser"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveryFee"
+            android:text="Total: S$"
+            android:textSize="14dp"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/pricePerUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deliveryFee"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="0.00"
+            android:textSize="14dp"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrdersActivity">
+
+
+    <include
+        android:id="@+id/requestToolbar"
+        style="@style/MenuStyle"
+        layout="@layout/app_bar_layout"></include>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/grandTotalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/requestToolbar"
+        android:text="Grand Total : "
+        android:textSize="20dp"
+        android:textColor="@color/DarkerOrange"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/requestTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/requestToolbar"
+        android:layout_toRightOf="@+id/grandTotalTextView"
+        android:text="DEFAULT"
+        android:textSize="20dp"
+        android:textColor="@color/DarkerOrange"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ordersRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/requestTotal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+
+        >
+
+        <Button
+            android:id="@+id/addOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_dark"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="-5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Add Order"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/removeOrderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_dark"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Remove Order"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
